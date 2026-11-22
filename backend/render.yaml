@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vyra-backend
+    runtime: docker
+    rootDir: backend
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        value: https://YOUR_USERNAME.github.io
+      - key: MAX_CONCURRENT_DOWNLOADS
+        value: "2"
+      - key: JOB_RETENTION_HOURS
+        value: "1"
